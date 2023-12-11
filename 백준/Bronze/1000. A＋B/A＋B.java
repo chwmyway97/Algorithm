@@ -4,16 +4,19 @@ import java.io.OutputStreamWriter;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a, b;
-        a = sc.nextInt();
-        b = sc.nextInt();
 
-        bw.write(String.valueOf(a+b));
-        bw.flush();
-        bw.close();
+        int A, B;
+        String SumAB;
 
+        A = sc.nextInt();
+        B = sc.nextInt();
+        SumAB = String.valueOf(A + B);
+        if (A > 0 && B < 10) {
+            System.out.println(SumAB);
+        } else {
+            System.out.println("범위가 맞지 않습니다.");
+        }
     }
 }
